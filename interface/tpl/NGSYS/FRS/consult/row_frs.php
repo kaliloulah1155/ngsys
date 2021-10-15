@@ -7,7 +7,7 @@ $code_key= $_POST['code_key'];
 $result = pg_query("SELECT * FROM public.mis_tab_besoins WHERE code_key='".$code_key."' ");
 $find = pg_num_rows($result);
 
-
+  //tableau
 $output='';
 
 if ($find!=0){
