@@ -40,7 +40,7 @@ $(document).on('click', '.edit_btn', function (e) {
     e.preventDefault();
 });
 
-
+     
 
 function cal_data(vcontrat,vtab_date){
     

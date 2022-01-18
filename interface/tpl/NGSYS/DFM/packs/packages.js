@@ -153,7 +153,7 @@ let link_url_addprs =
     "/interface/tpl/" +
     appName +
     "/DFM/packs/get_pers_info.php";
-     
+
     $('tbody').delegate('.lib_personnel','change',function(){
       var tr=$(this).parent().parent();
       var email=tr.find('.lib_personnel').val();
@@ -175,7 +175,7 @@ let link_url_addprs =
 
                       //console.log(newData['civ']);
 
-                                 
+                      
                         tr.find('.civilite').val(newData['civ']);
                         tr.find('.datenaiss').val(newData['dtenaiss']);
 

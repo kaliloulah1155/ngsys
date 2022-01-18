@@ -550,6 +550,8 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
 								</p>-->
+								<input type="hidden" class="manager_wk" name="POS_VAL_RUB_A4A"  value="{POS_VAL_RUB_A4A}" />
+
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -579,7 +581,8 @@
 								<!--<p class="d-flex">
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4B}</strong>
-								</p>-->
+								</p>-->    
+								<input type="hidden" class="rh_wk" name="POS_VAL_RUB_A4B"  value="{POS_VAL_RUB_A4B}" />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -610,6 +613,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>-->
+								<input type="hidden" class="dga_wk" name="POS_VAL_RUB_A4C"  value="{POS_VAL_RUB_A4C}" />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -640,6 +644,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>-->
+								<input type="hidden" class="dg_wk" name="POS_VAL_RUB_A4D"  value="{POS_VAL_RUB_A4D}" />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -750,7 +755,7 @@
 
 						<div class="circle2">
 							<span class="label2">1</span>
-							<span class="title2">MANAGER</span>
+							<span class="title2">MANAGER</span>  
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 20%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
@@ -1008,7 +1013,7 @@
 								<!-- Etat Fiche -->
 								<div class="form-group" style="margin: 1%">
 									<label for="bio">Etat Fiche</label>
-									<input type="text" placeholder="N&#176; poseidon" name='POS_VAL_RUB_ETF' value="{POS_VAL_RUB_ETF}" class="form-control" style="width: 100%">
+									<input type="text" placeholder="N&#176; poseidon" name='POS_VAL_RUB_ETF' value="{POS_VAL_RUB_ETF}" class="form-control etat_fiche " style="width: 100%">
 								</div>
 								<!-- Etat type -->
 								<div class="form-group" style="margin: 1%">
@@ -1066,7 +1071,7 @@
 		<script language='javascript' src='/{NOM_APPLICATION}/include/jQuery/parseley.js'></script>
 	    <script language='javascript' src='/{NOM_APPLICATION}/include/jQuery/parseleyfr.js'></script>
 		<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/ABS/abspdf/pdfabs.js"></script>
-		<script language='javascript' src="/{NOM_APPLICATION}/include/alert/sweetalert.js"></script>
+		<!--<script language='javascript' src="/{NOM_APPLICATION}/include/alert/sweetalert.js"></script>-->
 		
 
 
@@ -1538,10 +1543,11 @@ $('.dureedebselect').val( $('.dureedeb').val()); //vue de modification
 		
 
 
-	});
+	});   
 	</script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/ABS/workflow.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/ABS/notification.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/ABS/valideurs/validateur.js"></script>
 
 	
 </html>

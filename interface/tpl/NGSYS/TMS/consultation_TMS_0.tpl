@@ -403,7 +403,7 @@
 						<table class="table" align="center" id="tblMain">
 							<tr>
 								<td style="font-size: 15px; font-family: 'Times New Roman';">
-									<span name="current" class="label1 label-success" data-value="{POS_VAL_RUB_EAC}"><b>{POS_VAL_RUB_EAC}</b></span>
+									  <span name="current" class="label1 label-success" data-value="{POS_VAL_RUB_EAC}"><b>{POS_VAL_RUB_EAC}</b></span>
 								</td>
 							</tr>
 						</table>
@@ -427,6 +427,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_NOM} {POS_VAL_RUB_PRE}</strong>
 								</p>
+								<input type="hidden" class="emp_wk" name="POS_VAL_RUB_CRE"  value="{POS_VAL_RUB_CRE}" style="color: black;" />
 								<!-- Affichage de la date -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
@@ -446,6 +447,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
 								</p>
+								<input type="hidden" class="mng_wk" name="POS_VAL_RUB_A4A"  value="{POS_VAL_RUB_A4A}" style="color: black;" />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -549,7 +551,7 @@
 									<input type="hidden" name="{POS_VAL_RUB_CRE}" value="{POS_VAL_RUB_CRE}" class="form-control createur">
 								<div class="form-group row" style="margin: 0%">
 									<label for="bio">N&#176; poseidon</label>
-									<input type="text" name="{POS_VAL_RUB_NUD}" value="{POS_VAL_RUB_NUD}" placeholder="N&#176; poseidon" class="form-control" style="width: 100%">
+									<input type="text" name="{POS_VAL_RUB_NUD}" id="numposeidon" value="{POS_VAL_RUB_NUD}" placeholder="N&#176; poseidon" class="form-control" style="width: 100%">
 								</div>
 								<!-- Etat Fiche -->
 								<div class="form-group" style="margin: 1%">
@@ -1025,6 +1027,7 @@ function limit(element)
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/TMS/notification.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/TMS/heuresup/app_tms.js" defer></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/TMS/activites/activites_edit.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/TMS/valideurs/validateur.js"></script>
 
 	
 </html>

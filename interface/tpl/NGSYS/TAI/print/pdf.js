@@ -24,7 +24,7 @@ $(document).on('change','.choice',function(){
     }
 
 });
-
+       
 
 $(document).on('click', '.btn_format', function (e) {
 

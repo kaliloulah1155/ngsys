@@ -39,7 +39,7 @@
      $retour=[];
 
    
-
+     
     $rq_dte="  SELECT \"DSG\"
     FROM public.pos_tab_index_cot WHERE \"MEL\"='".strtolower($_POST['email'])."' ORDER BY \"NUD\" DESC LIMIT 1;  ";
     $ctx_dte = pg_query($rq_dte) or die('Query failed: ' . pg_last_error());

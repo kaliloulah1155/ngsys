@@ -480,6 +480,8 @@ function limit(element)
 							findTotalDuree();
 						
 				} 
+			 
+				
 						 
      		});
 

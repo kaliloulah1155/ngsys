@@ -149,7 +149,7 @@
                         </tr>
                     </thead>
                     <tbody  class="list_personnel">
-                        <tr>
+                         <!-- <tr>
                             <th style="min-width: 100px;text-align: left;">Agnymel</th>
                             <th style="min-width: 100px;text-align: left;">Guy Marcel</th>
                             <th style="min-width: 100px;text-align: left;">M</th>
@@ -162,7 +162,7 @@
                             <th style="min-width: 100px;text-align: center;">
                                 <a href="#"><i class="fa fa-copy fa-2x text-dark"></i></a>
                             </th>
-                        </tr>
+                        </tr>-->
 
                     </tbody>
                 </table>

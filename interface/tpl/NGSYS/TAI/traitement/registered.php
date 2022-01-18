@@ -11,7 +11,7 @@ $retour=array();
 if(!empty($contrat) AND  !empty($mois) AND  !empty($year)){
       //  echo $contrat.' '.$mois.' '.$year;
         try{
-
+       
             $retour["success"]=200;
             $retour["message"]='GET ALL PAYMENT';
             $retour["author"]='By Ibson';

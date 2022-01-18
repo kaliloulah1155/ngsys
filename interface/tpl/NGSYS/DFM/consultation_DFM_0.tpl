@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head>     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultation Demeande de formation</title>
+    <title>Consultation Demande de formation</title>
 	<link href="/{NOM_APPLICATION}/include/style_nouveau/style_accueil.css" rel="stylesheet">
     <link href="/{NOM_APPLICATION}/include/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://use.fontawesome.com/releases/v5.0.8/css/all.css' type='text/css' rel='STYLESHEET' />
@@ -199,6 +199,14 @@
 		<!-- BEGIN BLOC_OLD_VALUE -->
 		<input type='hidden' name='{NAME_OLD_RUB}' value="{VALUE_OLD_RUB}">
 		<!-- END BLOC_OLD_VALUE -->
+
+		<!-- données de l'utilisateur connecté -->
+					<input type="hidden" name='POS_VAL_RUB_NOM' class="viewnom" value="{POS_VAL_RUB_NOM}" >
+					<input type="hidden" name='POS_VAL_RUB_PRE' class="viewprenom" value="{POS_VAL_RUB_PRE}" >
+					<input type="hidden" name='POS_VAL_RUB_FON' class="viewfonction" value="{POS_VAL_RUB_FON}" >
+					<input type="hidden" name='POS_VAL_RUB_DPT'  value="{POS_VAL_RUB_DPT}" >
+		<!--fin données de l'utilisateur connecté -->
+		
 		
 		<header class="header-const">
 			<div id="actions-container" class="ui-widget-content titre-boutons" style="padding-left: 3%; text-align: center; background: transparent; border: none">
@@ -212,7 +220,7 @@
 				</div>
 				<div class="collapse navbar-collapse " id="navbar-collapse-3">
 					<ul class="nav navbar-nav level0 nav-tabs">
-						<li class="active b1" ><a role="button" class="btn btn-outline-primary" data-toggle="tab" href="#tabs-1" style="width: 100%;padding-top: -11px;">Demande</a></li>
+						<li class="active b1" ><a role="button" class=" btn-outline-primary" data-toggle="tab" href="#tabs-1" style="width: 100%;padding-top: -11px;">Demande</a></li>
 						<li class="b2"><a role="button" class="btn-outline-primary" data-toggle="tab" href="#tabs-2" style="width: 100%;padding-top: -11px;">Traitement</a></li>
 						<li class="b3"><a role="button" class="btn-outline-primary" data-toggle="tab" href="#tabs-3" style="width: 100%;padding-top: -11px;">Document</a></li>
 						<li class="b4"><a role="button" class="btn-outline-primary" data-toggle="tab" href="#tabs-4" style="width: 100%;padding-top: -11px;">Historique</a></li>
@@ -306,6 +314,9 @@
 															</td>
 															<td style="width: 30px; border: 1px solid;font-weight: bold;text-align: center;font-size: 11px">
 																<span>CNPS</span>	
+															</td>
+															<td style="width: 30px; border: 1px solid;font-weight: bold;text-align: center;font-size: 11px">
+																<span>Statut</span>	
 															</td>
 														 
 														</tr>
@@ -436,54 +447,28 @@
 						</div>
 						<span class="bar1" style="display: none;"></span>
 
-
+            
 						<div class="circle1">
 							<span class="label1">1</span>
-							<span class="title1">EMPLOYE</span>
+							<span class="title1">MANAGER</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 20%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
 								<p class="d-flex">
-									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
-									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_CRE}</strong>
+									<span class="pr-3" style="font-size: 13px; font-family: Times;">login :</span>
+									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_CRE} </strong>
 								</p>
 								<!-- Affichage de la date -->
+								 <input type="hidden" name='POS_VAL_RUB_CRE' value="{POS_VAL_RUB_CRE}" class="createur" placeholder="createur"  style="color: black;"  />
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_DCR}</strong>
 								</span>
 							</div>
 						</div>
-						<span class="bar1"></span>
+						
 
-						<div class="circle1">
-							<span class="label1">2</span>
-							<span class="title1">MANAGER</span>
-							<!-- zone d'affichage -->
-							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
-								<!-- Affichage du login  -->
-								<p class="d-flex">
-									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
-									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
-								</p>
-								<!-- Affichage du visa -->
-								<span class="d-flex">
-									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
-									<strong class="pt-1_pl-5 mng_visa" style="font-size: 13px;">{POS_VAL_RUB_VC0}</strong>
-								</span>
-								<!-- Affichage de la date -->
-								<span class="d-flex">
-									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
-									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_DT1}</strong>
-								</span>
-								<!-- Commentaire -->
-								<p class="d-flex">
-									<span class="pr-4" style="font-size: 13px; font-family: Times;">Commentaire :</span>
-										<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_CT1}</strong>
-									</span>
-								</p>
-							</div>
-						</div>
+						
 						
 						<span class="bar1"></span>
 						<div class="circle1">
@@ -493,9 +478,10 @@
 							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
 								<p class="d-flex">
-									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
+									<span class="pr-3" style="font-size: 13px; font-family: Times;display:none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4B}</strong>
 								</p>
+								 <input type="hidden" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="rh_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -523,9 +509,10 @@
 							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
 								<p class="d-flex">
-									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
+									<span class="pr-3" style="font-size: 13px; font-family: Times; display:none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>
+								 <input type="hidden" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="manager_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -553,9 +540,10 @@
 							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
 								<p class="d-flex">
-									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
+									<span class="pr-3" style="font-size: 13px; font-family: Times; font-display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4D}</strong>
 								</p>
+								 <input type="hidden" name='POS_VAL_RUB_A4D' value="{POS_VAL_RUB_A4D}" class="dga_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -584,9 +572,10 @@
 							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
 								<p class="d-flex">
-									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
+									<span class="pr-3" style="font-size: 13px; font-family: Times;display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4E}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4E' value="{POS_VAL_RUB_A4E}" class="dg_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -616,19 +605,19 @@
 
 						<!--commentaire sur  de la ligne de vie -->
 
-					<div class="row jumbotron" style="margin: auto;padding: 12px">
+					<div class="row jumbotron mngconnex" style="margin: auto;padding: 12px">
 						<!-- acteur 1 -->
 						<div class="acteur1">
-							<div class="col-sm-4" style="padding-bottom: 3%">
+							<div class="col-sm-4" style="padding-bottom: 3%;display:none;">
 								<label for="bio">MANAGER </label>
 								<div class="info_group" style="display:flex;flex-direction:row">
-									<input type="text" class="form-control" name='POS_VAL_RUB_A4A' value="{POS_VAL_RUB_A4A}" style="width: 80%;">
-									<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4A', 'POS_VAL_RUB_A4A')">
+									<input type="hidden" class="form-control" name='POS_VAL_RUB_A4A' value="{POS_VAL_RUB_A4A}" style="width: 80%;">
+									<!--<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4A', 'POS_VAL_RUB_A4A')">
 									   <img class="img-fluid" src="/{NOM_APPLICATION}/images/icons/btn_mode_modification.png" width="20" height="20" style="margin:7px 7px;cursor: pointer;">
-									</a>
+									</a>-->
 								</div>	
 							</div>
-							<div class="col-sm-1" style="padding-bottom: 3%">
+							<!--<div class="col-sm-1" style="padding-bottom: 3%">
 								<label for="bio">Visa</label>
 								<label for="bio" class="input-group-addon">
 									<img src="../../../../images/visas/visa_{POS_VAL_RUB_VC0}.gif" alt="">
@@ -637,24 +626,24 @@
 							<div class="col-sm-2" style="padding-bottom: 3%">
 								<label for="bio">Date</label>
 								<input type="text" name='POS_VAL_RUB_DT1' value="{POS_VAL_RUB_DT1}" class="form-control" style="width: 100%;">
-							</div>
-							<div class="col-sm-5" style="padding-bottom: 3%">
-								<label for="bio">Commentaire</label>
-								<textarea class="form-control" id="bio" rows="1" name='POS_VAL_RUB_CT1' style="width: 90%;resize: none">{POS_VAL_RUB_CT1}</textarea>
+							</div>-->
+							<div class="col-sm-5" style="padding-bottom: 3%;display:none;">
+								<label for="bio">Commentaire du Manager</label>
+								<textarea class="form-control" id="bio" rows="5" name='POS_VAL_RUB_CT1' style="width: 250%;resize: none">{POS_VAL_RUB_CT1}</textarea>
 							</div>
 						</div>
 						<!-- acteur 2 -->
 						<div class="acteur2">
-							<div class="col-sm-4" style="padding-bottom: 3%">
+							<div class="col-sm-4" style="padding-bottom: 3%;display:none;">
 								<label for="bio">RH</label>
 									<div class="info_group" style="display:flex;flex-direction:row">
-										<input type="text" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="form-control" placeholder="" style="width: 80%;">
-										<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4B', 'POS_VAL_RUB_A4B')">
+										<input type="hidden" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="form-control" placeholder="" style="width: 80%;">
+										<!--<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4B', 'POS_VAL_RUB_A4B')">
 											<img class="img-fluid" src="/{NOM_APPLICATION}/images/icons/btn_mode_modification.png" width="20" height="20" style="margin:7px 7px;cursor: pointer;">
-										</a>
+										</a>-->
 									</div>
 							</div>
-							<div class="col-sm-1" style="padding-bottom: 3%">
+							<!--<div class="col-sm-1" style="padding-bottom: 3%">
 								<label for="bio">Visa</label>
 								<label for="bio" class="input-group-addon">
 									<img src="../../../../images/visas/visa_{POS_VAL_RUB_VC1}.gif" alt="">
@@ -663,24 +652,24 @@
 							<div class="col-sm-2" style="padding-bottom: 3%">
 								<label for="bio">Date</label>
 								<input type="text" name='POS_VAL_RUB_DT2' value="{POS_VAL_RUB_DT2}" class="form-control" placeholder="" style="width: 100%;">
-							</div>
-							<div class="col-sm-5" style="padding-bottom: 3%">
-								<label for="bio">Commentaire</label>
-								<textarea class="form-control" id="bio" name='POS_VAL_RUB_CT2' rows="1" style="width: 90%;resize: none">{POS_VAL_RUB_CT2}</textarea>
+							</div>-->
+							<div class="col-sm-5 rhconnex" style="padding-bottom: 3%">
+								<label for="bio">Commentaire de la RH</label>
+								<textarea class="form-control" id="bio" name='POS_VAL_RUB_CT2' rows="5" style="width: 250%;resize: none">{POS_VAL_RUB_CT2}</textarea>
 							</div>
 						</div>
 						<!-- acteur 3 -->
 						<div class="acteur3">
-							<div class="col-sm-4" style="padding-bottom: 3%">
+							<div class="col-sm-4" style="padding-bottom: 3%;display:none;">
 								<label for="bio">MANAGER_ADM</label>
 									<div class="info_group" style="display:flex;flex-direction:row">
-									 	<input type="text" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="form-control" placeholder="" style="width: 80%;">
-											<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4C', 'POS_VAL_RUB_A4C')">
+									 	<input type="hidden" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="form-control" placeholder="" style="width: 80%;">
+											<!--<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4C', 'POS_VAL_RUB_A4C')">
 												<img class="img-fluid" src="/{NOM_APPLICATION}/images/icons/btn_mode_modification.png" width="20" height="20" style="margin:7px 7px;cursor: pointer;">
-											</a>
+											</a>-->
 									</div>
 							</div>
-							<div class="col-sm-1" style="padding-bottom: 3%">
+							<!--<div class="col-sm-1" style="padding-bottom: 3%">
 								<label for="bio">Visa</label>
 								<label for="bio" class="input-group-addon">
 									<img src="../../../../images/visas/visa_{POS_VAL_RUB_VC2}.gif" alt="">
@@ -690,24 +679,24 @@
 							<div class="col-sm-2" style="padding-bottom: 3%">
 								<label for="bio">Date</label>
 								<input type="text" name='POS_VAL_RUB_DT3' value="{POS_VAL_RUB_DT3}" class="form-control" placeholder="" style="width: 90%;">
-							</div>
-							<div class="col-sm-5" style="padding-bottom: 3%">
-								<label for="bio">Commentaire</label>
-								<textarea class="form-control" id="bio" rows="1" name='POS_VAL_RUB_CT3' style="width: 90%;resize: none">{POS_VAL_RUB_CT3}</textarea>
+							</div>-->
+							<div class="col-sm-5 admconnex" style="padding-bottom: 3%">
+								<label for="bio">Commentaire du manager ADM</label>
+								<textarea class="form-control" id="bio" rows="5" name='POS_VAL_RUB_CT3' style="width: 250%;resize: none">{POS_VAL_RUB_CT3}</textarea>
 							</div>
 						</div>
 						<!-- acteur 4 -->
 						<div class="acteur4">
-							<div class="col-sm-4" style="padding-bottom: 3%">
+							<div class="col-sm-4" style="padding-bottom: 3%;display:none;">
 								<label for="bio">DGA</label>
 									<div class="info_group" style="display:flex;flex-direction:row">
-									 	<input type="text" name='POS_VAL_RUB_A4D' value="{POS_VAL_RUB_A4D}" class="form-control" placeholder="" style="width: 80%;">
-											<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4D', 'POS_VAL_RUB_A4D')">
+									 	<input type="hidden" name='POS_VAL_RUB_A4D' value="{POS_VAL_RUB_A4D}" class="form-control" placeholder="" style="width: 80%;">
+											<!--<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4D', 'POS_VAL_RUB_A4D')">
 												<img class="img-fluid" src="/{NOM_APPLICATION}/images/icons/btn_mode_modification.png" width="20" height="20" style="margin:7px 7px;cursor: pointer;">
-											</a>
+											</a>-->
 									</div>
 							</div>
-							<div class="col-sm-1" style="padding-bottom: 3%">
+							<!--<div class="col-sm-1" style="padding-bottom: 3%">
 								<label for="bio">Visa</label>
 								<label for="bio" class="input-group-addon">
 									<img src="../../../../images/visas/visa_{POS_VAL_RUB_VC3}.gif" alt="">
@@ -717,24 +706,24 @@
 							<div class="col-sm-2" style="padding-bottom: 3%">
 								<label for="bio">Date</label>
 								<input type="text" name='POS_VAL_RUB_DT6' value="{POS_VAL_RUB_DT6}" class="form-control" placeholder="" style="width: 90%;">
-							</div>
-							<div class="col-sm-5" style="padding-bottom: 3%">
-								<label for="bio">Commentaire</label>
-								<textarea class="form-control" id="bio" rows="1" name='POS_VAL_RUB_CT4' style="width: 90%;resize: none">{POS_VAL_RUB_CT4}</textarea>
+							</div>-->
+							<div class="col-sm-5 dgaconnex" style="padding-bottom: 3%">
+								<label for="bio">Commentaire du DGA</label>
+								<textarea class="form-control" id="bio" rows="5" name='POS_VAL_RUB_CT4' style="width: 250%;resize: none">{POS_VAL_RUB_CT4}</textarea>
 							</div>
 						</div>
 						<!-- acteur 5 -->
 						<div class="acteur5">
-							<div class="col-sm-4" style="padding-bottom: 3%">
+							<div class="col-sm-4" style="padding-bottom: 3%;display:none;">
 								<label for="bio">DG</label>
 									<div class="info_group" style="display:flex;flex-direction:row">
-									 	<input type="text" name='POS_VAL_RUB_A4E' value="{POS_VAL_RUB_A4E}" class="form-control" placeholder="" style="width: 80%;">
-											<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4E', 'POS_VAL_RUB_A4E')">
+									 	<input type="hidden" name='POS_VAL_RUB_A4E' value="{POS_VAL_RUB_A4E}" class="form-control" placeholder="" style="width: 80%;">
+											<!--<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4E', 'POS_VAL_RUB_A4E')">
 												<img class="img-fluid" src="/{NOM_APPLICATION}/images/icons/btn_mode_modification.png" width="20" height="20" style="margin:7px 7px;cursor: pointer;">
-											</a>
+											</a>-->
 									</div>
 							</div>
-							<div class="col-sm-1" style="padding-bottom: 3%">
+							<!--<div class="col-sm-1" style="padding-bottom: 3%">
 								<label for="bio">Visa</label>
 								<label for="bio" class="input-group-addon">
 									<img src="../../../../images/visas/visa_{POS_VAL_RUB_VC4}.gif" alt="">
@@ -744,10 +733,10 @@
 							<div class="col-sm-2" style="padding-bottom: 3%">
 								<label for="bio">Date</label>
 								<input type="text" name='POS_VAL_RUB_DT5' value="{POS_VAL_RUB_DT5}" class="form-control" placeholder="" style="width: 90%;">
-							</div>
-							<div class="col-sm-5" style="padding-bottom: 3%">
-								<label for="bio">Commentaire</label>
-								<textarea class="form-control" id="bio" rows="1" name='POS_VAL_RUB_CT5' style="width: 90%;resize: none">{POS_VAL_RUB_CT5}</textarea>
+							</div>-->
+							<div class="col-sm-5 dgconnex" style="padding-bottom: 3%">
+								<label for="bio">Commentaire du DG</label>
+								<textarea class="form-control" id="bio" rows="5" name='POS_VAL_RUB_CT5' style="width: 250%;resize: none">{POS_VAL_RUB_CT5}</textarea>
 							</div>
 						</div>
 					</div>
@@ -854,7 +843,65 @@
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DFM/dfmpdf/pdfdemandeform.js"></script>
 	
 	<script>
+
+	//donnee de l'utilisateur connecté
+    var nom=$('.nom').val();
+	var prenom=$('.prenom').val();
+	var fonction=$('.fonction').val();
+	var departement=$('.departement').val();
+
+	  $('.viewnom').val(nom);
+	  $('.viewprenom').val(prenom);
+	  $('.viewfonction').val(fonction);
+	  $('.viewdepartement').val(departement);
+
+//Fin desdonnées de l'utilisateur connecté
+
+		var bouton_initial = $('.bouton_sub').val();
+		var caractere_hermes = "LIBELLE_ACTION_HERMES";
+		var  comp =bouton_initial.indexOf(caractere_hermes) !== -1;
+		if(comp===true){
+		$('.bouton_sub').hide();	
+			}
+	//Traitement sur les commentaires
+
 		var prof_util = "{PROFIL_UTILISATEUR}";	 
+		var str = prof_util;
+		var profil_util = str.substring(0, 9); 
+
+		$('.rhconnex,.admconnex,.dgaconnex,.dgconnex').hide();
+
+
+		if(profil_util=='MANAGER'){
+				$('.mngconnex').hide();
+			}
+
+		if(profil_util=='RH'){
+				$('.rhconnex').show();
+			}
+
+		if(profil_util=='MANAGER_A'){
+				$('.admconnex').show();
+			}
+
+		if(profil_util=='DGA'){
+				$('.dgaconnex').show();
+			}
+
+		if(profil_util=='DIRECTEUR'){
+				$('.dgconnex').show();
+			}
+
+
+
+
+		
+
+
+	// Fin traitement sur les commentaires
+
+
+
 		switch (prof_util) {
 		 case "ADMIN" :
 			   $('.rhdmdabs').show();
@@ -885,14 +932,16 @@
             allowClear: true
         });
 
-        $("#autresLigne").css("display","none");
+
+        // masquer & demasquer le champ de precision du bouton radio autre
+        $("#autresLigne").hide();
         $(document).on('click','.btnFors',function(){
         	let valbnt = $(this).val();
         	if(valbnt == "AUTRES"){
-        		$("#autresLigne").css("display","block");
+        		$("#autresLigne").show();
         	}
         	else{
-        		$("#autresLigne").css("display","none");
+        		$("#autresLigne").hide();
         	}
         });
 
@@ -981,6 +1030,8 @@
    
 	</script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DFM/workflowDFM.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DFM/notification.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DFM/valideurs/validateur.js"></script>
 
 	
 </html>

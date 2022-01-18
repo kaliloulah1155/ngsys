@@ -10,7 +10,7 @@ let link_url =
 
 let link_urlpdf =
     "/" +
-    appli +
+    appli +  
     "/interface/tpl/" +
     appli +
     "/PRS/prspdf/prspdf_actions.php";
@@ -24,7 +24,7 @@ function ajaxListePRS() {
         success: function(response) {
 
             var responseNew = JSON.parse(response);
-
+    
             var j = 1;
             var t = $('.table').DataTable();
             t.clear();

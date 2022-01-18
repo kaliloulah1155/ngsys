@@ -3,7 +3,7 @@
 <head>    
     <meta charset="UTF-8">   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demande de pret</title>
+    <title>Pr&#234;t d&#146;entreprise</title>
     <link href="/{NOM_APPLICATION}/include/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="/{NOM_APPLICATION}/include/alert/sweetalert.css" rel="stylesheet"> -->
 	<link href='https://use.fontawesome.com/releases/v5.0.8/css/all.css' type='text/css' rel='STYLESHEET'/>
@@ -121,7 +121,7 @@
 
 		<div class="col_list">
 			<i class="fa fa-eye fa-1x" style="color:#4a67b3;"></i>
-			<a href="javascript:void lanceBibBal('/{NOM_APPLICATION}/interface/session/principal/resultat/rechercher_db.php&TYPE_RECHERCHE=RECHERCHE_BAL&POS_QUEST_NOM=Bal_PRT_nv&POS_QUEST_PUBLIC=1', 'QUESTION_BAL');">
+			<a href="javascript:void lanceBibBal('/{NOM_APPLICATION}/interface/session/principal/resultat/rechercher_db.php&TYPE_RECHERCHE=RECHERCHE_BAL&POS_QUEST_NOM=Bal_PRT_lnv&POS_QUEST_PUBLIC=1', 'QUESTION_BAL');">
 				<span style="color:#4a67b3;">Cliquez pour consulter la liste</span>
 			</a>
 		</div>
@@ -196,22 +196,27 @@
 					<div class="alert alert-danger flashalert" role="alert" style="display:none">
 				       Votre montant prelevable est sup&eacute;rieur &agrave; votre quotit&eacute; cessible!! Veuillez changer le nombre de mois(Dur&eacute;e) et le Montante emprunt&acute;
 					</div>
+					
+					<div class="col-sm-12 text-center" style="margin-bottom: 13px">
+						<label>Les champs avec (<span class='text'></span>) sont obligatoires</label>
+					</div>
 					<div class="row" style="padding-top: 1%">
 						<div class="col-sm-6 form-group">
-						   <label for="bio">Montant emprunt&eacute; <span class='text'></span> :</label>
+						   <label for="bio">Montant emprunt&eacute;<span class='text'></span> :</label>
 						   <input type="number"  name='POS_VAL_RUB_VEM' min="0" value="{POS_VAL_RUB_VEM}" class="form-control sommeEmprunt" id="bio" style="width: 100%;" required="true" data-parsley-pattern="^[0-9]+$" data-parsley-trigger="keyup" required="true">
 
 					<input type="hidden" name="POS_VAL_RUB_MDT" value="{POS_VAL_RUB_MDT}" class="emprunt_lettre" />
-
+						
 						</div>
+						
 						<div class="col-sm-6 form-group">
-						   <label for="bio">Dur&eacute;e (en mois) <span class='text'></span> :</label>
+						   <label for="bio">Dur&eacute;e (en mois)<span class='text'></span> :</label>
 						   <input type="number" name='POS_VAL_RUB_DUM' min="0" value="{POS_VAL_RUB_DUM}" class="form-control mois" id="bio" style="width: 100%;" required="true" data-parsley-trigger="keyup" data-parsley-pattern="[0-9][0-9]?">
 							<input type="hidden" name="POS_VAL_RUB_DLA" value="{POS_VAL_RUB_DLA}" class="mois_lettre" />
 
 						</div>
 						<div class="col-sm-6 form-group">
-						   <label for="bio">Date d&eacute;but de pr&eacute;l&egrave;vement <span class='text'></span> :</label>
+						   <label for="bio">Date d&eacute;but de pr&eacute;l&egrave;vement<span class='text'></span> :</label>
 						   <input type="text" name='POS_VAL_RUB_DIN' value="{POS_VAL_RUB_DIN}" class="form-control datedebut" placeholder="jj/mm/aaaa" id="date1" style="width: 100%;" required="true">
 						</div>
 						<div class="col-sm-6 form-group">

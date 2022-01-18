@@ -363,6 +363,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Nom et prenom(s) :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_NOM} {POS_VAL_RUB_PRE}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_CRE' value="{POS_VAL_RUB_CRE}" class="createur"   style="color: black;"  />
 								<!-- Affichage de la date -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
@@ -382,6 +383,7 @@
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
 								</p>-->
 								<!-- Affichage du visa -->
+								<input type="hidden" name='POS_VAL_RUB_A4A' value="{POS_VAL_RUB_A4A}" class="rh_wk" style="color: black;"  />
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
 									<strong class="pt-1_pl-5 rh_visa" style="font-size: 13px;">{POS_VAL_RUB_VC0}</strong>
@@ -411,6 +413,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4B}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="controleur_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -441,6 +444,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="dga_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -471,6 +475,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4D}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4D' value="{POS_VAL_RUB_A4D}" class="dg_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -501,6 +506,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4E}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4E' value="{POS_VAL_RUB_A4E}" class="finance_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -1137,10 +1143,11 @@ $('.viewdatefin').text( $('.vdatefinprelev1').val() ) ;
 		 
 			});
 
-		
+		       
 	</script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PRT/workflowPRT.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PRT/notification.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PRT/valideurs/validateur.js"></script>
 
 	
 </html>

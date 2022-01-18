@@ -13,8 +13,8 @@
 	$dtembauche=$_POST['dtembauche'];
 	$cnps=$_POST['cnps'];
 	$position=$_POST['position'];
-   
-    
+
+
 
 
 if(!empty($loadcode) ){

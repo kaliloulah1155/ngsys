@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+<head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultation domiciliation bancaire</title>
@@ -469,6 +469,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Nom et prenom(s) :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_NOM} {POS_VAL_RUB_PRE}</strong>
 								</p>
+								 <input type="hidden" name='POS_VAL_RUB_CRE' value="{POS_VAL_RUB_CRE}" class="createur"   style="color: black;"  />
 								<!-- Affichage de la date -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
@@ -488,6 +489,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4A' value="{POS_VAL_RUB_A4A}" class="rh_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -518,6 +520,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4B}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="dga_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -548,6 +551,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>-->
+								<input type="hidden" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="dg_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -733,6 +737,13 @@ if($('.cbk1').val()=="OUI"){
 	 
 }
 
+var bouton_initial = $('.bouton_sub').val();
+		var caractere_hermes = "LIBELLE_ACTION_HERMES";
+		var  comp =bouton_initial.indexOf(caractere_hermes) !== -1;
+		if(comp===true){
+		$('.bouton_sub').hide();	
+			}
+
 	//traitement sur la connection de chaque profil sur le workflow 
 
 
@@ -807,6 +818,7 @@ if($('.cbk1').val()=="OUI"){
 	</script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DBQ/workflowDBQ.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DBQ/notification.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/DBQ/valideurs/validateur.js"></script>
 
 	
 </html>

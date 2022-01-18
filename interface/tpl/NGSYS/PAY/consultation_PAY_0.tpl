@@ -550,6 +550,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_CRE} </strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_CRE' value="{POS_VAL_RUB_CRE}" class="createur" style="color: black;"  />
 								<!-- Affichage de la date -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
@@ -569,6 +570,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times; display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
 								</p>
+								<input type="hidden" class="mngadm_wk" name="POS_VAL_RUB_A4A"  value="{POS_VAL_RUB_A4A}" style="color: black;" />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -600,6 +602,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times; display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4B}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="controleur_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -631,6 +634,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="finance_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -662,6 +666,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4D}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4D' value="{POS_VAL_RUB_A4D}" class="dga_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -693,6 +698,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display: none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4E}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4E' value="{POS_VAL_RUB_A4E}" class="dg_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -712,8 +718,7 @@
 							</div>
 						</div>
 						
-						
-						
+	
 						<span class="bar1"></span>
 						<div class="circle1">
 							<span class="label1">7</span>
@@ -928,14 +933,12 @@
 			}
 
 
+$(document).on('change','.personnel',function(e){
+        
+		$('.avu').val($(this).val());
+});
+
 	 	//Traitement sur les commentaires
-
- 	
-
-		$(document).on('change','.personnel',function(e){
-				
-				$('.avu').val($(this).val());
-		});
 
 		var prof_util = "{PROFIL_UTILISATEUR}";	 
 		var str = prof_util;
@@ -1121,6 +1124,7 @@
     </script>
     <script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PAY/notification.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PAY/workflowPAY.js"></script>
+	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PAY/valideurs/validateur.js"></script>
 
 	
 </html>

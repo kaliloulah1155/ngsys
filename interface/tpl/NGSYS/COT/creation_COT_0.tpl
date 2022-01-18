@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cr&eacute;ation de contrat</title>
-	<link href="/{NOM_APPLICATION}/include/style_nouveau/style_accueil.css" rel="stylesheet">
+
 	<link href="/{NOM_APPLICATION}/include/alert/sweetalert.css" rel="stylesheet">
     <link href="/{NOM_APPLICATION}/include/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://use.fontawesome.com/releases/v5.0.8/css/all.css' type='text/css' rel='STYLESHEET' />
@@ -140,9 +140,14 @@
 								 <input type="hidden" name="POS_VAL_RUB_PRE" value="{POS_VAL_RUB_PRE}" class="prenoms_pers" />
 								 <input type="hidden" name="POS_VAL_RUB_MAT" value="{POS_VAL_RUB_MAT}" class="matricule_pers" />
 								  <input type="hidden" name="POS_VAL_RUB_DSV" value="{POS_VAL_RUB_DSV}" class="dateEnreg_pers" />
+
+								  <div class="col-sm-12 text-center" style="margin-bottom: 10px">
+									<label>Les champs avec (<span class='text'></span>) sont obligatoires</label>
+								</div>
+
 								<div class="col-sm-6">
 									<label for="bio">Nom & Pr&#233;noms <span class='text' ></span> :</label>
-									<select id="interimaire" style="width: 100%;" name='POS_VAL_RUB_MEL' class="form-control selectPers personnel" rows="1" required="true" data-parsley-trigger="keyup">
+									<select id="interimaire" style="width: 100%;" name='POS_VAL_RUB_MEL' class="form-control selectPers personnel" data-parsley-trigger="keyup" required="true">
 									    <option value="0">Veuillez s&#233;lectionner</option>
 									</select>
 									<input type="hidden"  class="interselectperso" name='POS_VAL_CTRL_MEL' id='POS_VAL_CTRL_MEL' value='{POS_VAL_RUB_MEL}' required="true">
@@ -260,21 +265,21 @@
 
 								<div class="col-sm-4" style="margin-top: 13px;display: none;" id="volumeHoraiares">
 									<label>Volume horaire</label>
-									<input type="text" name="POS_VAL_RUB_VHE" value="{POS_VAL_RUB_VHE}"  class="form-control horaire" min="1" placeholder="Volume horaire" style="width: 100%;">
+									<input type="text" name="POS_VAL_RUB_VHE" value="{POS_VAL_RUB_VHE}" onkeypress="return testNum(event, this, 2);" class="form-control horaire" min="1" placeholder="Volume horaire" style="width: 100%;">
 									<input type="hidden" class="horaire_lettre" name="POS_VAL_RUB_A1" value="{POS_VAL_RUB_A1}">
 								</div>
 
 								<div class="col-sm-4" style="margin-top: 13px;display: none;" id="nombreJours">
 									<label>Nombre de jours</label>
-									<input type="text" name="POS_VAL_RUB_NBR" value="{POS_VAL_RUB_NBR}"  class="form-control nbrejrs"  placeholder="Nombre de jours" style="width: 100%;">
+									<input type="text" name="POS_VAL_RUB_NBR" value="{POS_VAL_RUB_NBR}" onkeypress="return testNum(event, this, 2);" class="form-control nbrejrs"  placeholder="Nombre de jours" style="width: 100%;">
 									<input type="hidden" class="nbrejrs_lettre" name="POS_VAL_RUB_A2" value="{POS_VAL_RUB_A2}">
 								</div>
 
 								<div class="col-sm-4" style="margin-top: 13px;display: none;" id="periodeEssai">
 									<label>Dur&#233;e d&#146;essai (en mois) :</label>
-									<input type="text"  name="POS_VAL_RUB_DRU" value="{POS_VAL_RUB_DRU}"   class="form-control duree_essai"  placeholder="Dur&#233;e d&#146;essai (en mois)" style="width: 100%;">
+									<input type="text"  name="POS_VAL_RUB_DRU" value="{POS_VAL_RUB_DRU}" onkeypress="return testNum(event, this, 2);"  class="form-control duree_essai"  placeholder="Dur&#233;e d&#146;essai (en mois)" style="width: 100%;">
 
-									     
+									
 									<input type="hidden" name="POS_VAL_RUB_DLA" value="{POS_VAL_RUB_DLA}" class="mois_lettre_essai" />
 								</div>
 
@@ -290,7 +295,7 @@
 
 								<div class="col-sm-4" style="margin-top: 13px;display: none;" id="dureeContrats">
 									<label>Dur&#233;e du contrat (en mois)</label>
-									<input type="text" name="POS_VAL_RUB_MOI" value="{POS_VAL_RUB_MOI}"  class="form-control ecole_duree" min="1" placeholder="Dur&#233;e du contrat (en mois)" style="width: 100%;">
+									<input type="text" name="POS_VAL_RUB_MOI" value="{POS_VAL_RUB_MOI}" onkeypress="return testNum(event, this, 2);" class="form-control ecole_duree" min="1" placeholder="Dur&#233;e du contrat (en mois)" style="width: 100%;">
 
 									<!-- Mois en lettre -->
 									<input type="hidden"  name="POS_VAL_RUB_M1" value="{POS_VAL_RUB_M1}"     class="mois_lettre" />

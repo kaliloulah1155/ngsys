@@ -321,6 +321,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_CRE}</strong>
 								</p>
+								 <input type="hidden" name='POS_VAL_RUB_CRE' value="{POS_VAL_RUB_CRE}" class="createur"   style="color: black;"  />
 								<!-- Affichage de la date -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;padding-left: 3%">Date :</span>
@@ -340,6 +341,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display:none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4A}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4A' value="{POS_VAL_RUB_A4A}" class="rh_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -371,6 +373,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display:none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4B}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4B' value="{POS_VAL_RUB_A4B}" class="manager_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -402,6 +405,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display:none;">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4C}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4C' value="{POS_VAL_RUB_A4C}" class="dga_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -433,6 +437,7 @@
 									<span class="pr-3" style="font-size: 13px; font-family: Times;display:none;6666">Login :</span>
 									<strong class="pt-1_pl-5" style="font-size: 13px;">{POS_VAL_RUB_A4D}</strong>
 								</p>
+								<input type="hidden" name='POS_VAL_RUB_A4D' value="{POS_VAL_RUB_A4D}" class="dg_wk" style="color: black;"  />
 								<!-- Affichage du visa -->
 								<span class="d-flex">
 									<span class="pr-4" style="font-size: 13px; font-family: Times;">Visa :</span>
@@ -609,7 +614,7 @@
 								<!-- N° poseidon -->
 								<div class="form-group row" style="margin: 0%">
 									<label for="bio">N&#176; poseidon</label>
-									<input type="text" name='POS_VAL_RUB_NUD' value="{POS_VAL_RUB_NUD}"  placeholder="N&#176; poseidon" class="form-control" style="width: 100%">
+									<input type="text" name='POS_VAL_RUB_NUD' value="{POS_VAL_RUB_NUD}"  placeholder="N&#176; poseidon" class="form-control numposeidon" style="width: 100%">
 								</div>
 								<!-- Etat Fiche -->
 								<div class="form-group" style="margin: 1%">
@@ -777,7 +782,7 @@
 	</script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/SAN/workflowSAN.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/SAN/notification.js"></script>
-
+  <script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/SAN/valideurs/validateur.js"></script>
 </body>
 </html>
 
