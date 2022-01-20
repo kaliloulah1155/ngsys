@@ -117,13 +117,18 @@ $(document).on('click','.bouton_sub',function(){
 	manager.sender(); */
 	
 	var val_modif = $('.action_hermes').val();
+
     //var initiator="ibrahim.konate@ngser.com";
     var initiator =$('.createur').val().toLowerCase();
     var manager_wk =$('.manager_wk').val().toLowerCase();
+    //var manager_wk ="ibrahim.konate@ngser.com";
     var rh_wk =$('.rh_wk').val().toLowerCase();
     var dga_wk =$('.dga_wk').val().toLowerCase();
     var dg_wk =$('.dg_wk').val().toLowerCase();
+    var  p_interimaire = $('.interim').val();
+    
 
+ 
     var numdmd = $('#numposeidon').val();
 
 
@@ -151,6 +156,18 @@ $(document).on('click','.bouton_sub',function(){
                 ,appN);
              initiateur.sender();
              valideur(manager_wk,initiateur_wk,appN);
+
+             //ENVOI DE MAIL A L'INTERIMAIRE 
+             var interimaire = new WorkflowMailer(p_interimaire,"DEMANDE n\u00b0"+numdmd,
+                    `
+                       TYPE :  DEMANDE N&deg; ${numdmd} <br/>
+                       INFOS : VOUS AVEZ ETE DESIGN&Eacute;(E) COMME INTERIMAIRE <br/>
+                       INITIATEUR :  ${initiateur_wk} 
+                    `
+                ,appN);
+             interimaire.sender();
+
+
 
         }
 
@@ -285,13 +302,6 @@ $(document).on('click','.bouton_sub',function(){
                 ,appN);
              initiateur.sender();
         } 
-
-
-
-    /*
-	var val_modif = $('.action_hermes').val();
-    var action_modif = val_modif.slice(0, 10);
-    if (action_modif == 'AA_MOD_COT') {}*/
-	//console.log(manager_wk);
+   
 	
 });

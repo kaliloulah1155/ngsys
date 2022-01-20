@@ -168,13 +168,15 @@
 							</div>
 						</div>
 
-						<div class="row" style="margin-top: 2%">
+						<div class="row" style="margin-top: 2%">   
 							<div class="col-sm-6">
 								<label for="bio">Interimaire <span class='text' ></span> :</label>
 								 <select id="interimaire" style="width: 100%" name='POS_VAL_RUB_INT' class="form-control select2 personnel" rows="1" data-parsley-required="true" >
 								     <option value="" >Selectionner</option>
-								</select>      
+								</select>   
+								   
 								<input type="hidden" name='POS_VAL_CTRL_INT' id='POS_VAL_CTRL_INT' value='{POS_VAL_RUB_INT}'>
+								<input type="hidden" name='POS_VAL_RUB_INF' class="interim"  value='{POS_VAL_RUB_INF}'>
 							</div>
 							<div class="col-sm-3">
 								<label for="bio">Dur&eacute;e (en jour) <span class='text' ></span> :</label>
@@ -772,6 +774,16 @@ if( $('.typeDemande').val() !=null ){
 
 
 	});
+
+     
+
+     //Recuperation du mail de l'interimaire
+	$('.personnel').change(function() {
+     		p_interimaire=$(this).find(':selected').data('interim');
+            $('.interim').val(p_interimaire);
+     		 
+	});
+  
 	</script>
 	
 </html>

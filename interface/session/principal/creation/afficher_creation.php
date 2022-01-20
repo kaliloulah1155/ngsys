@@ -233,7 +233,7 @@ if ($retour)
  			while($row4 = pg_fetch_row($result4)){
 				$salaireNet = $row4[0];
 			}
-			echo "<span class='nombreEmp' >sssss {$categorie}</span>";
+			echo "<span class='nombreEmp' style='display:none' >{$nombreEmp}</span>";
         
 			     //PRENDRE LE SALAIRE NET DANS LA FICHE CONTRAT
 			switch (true) {

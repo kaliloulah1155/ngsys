@@ -411,7 +411,8 @@
 												<select id="interimaire" style="width: 100%" name='POS_VAL_RUB_INT' class="form-control select2 personnel" rows="1" data-parsley-required="true" >
 								     <option value="{POS_VAL_RUB_INT}" selected>{POS_VAL_RUB_INT}</option>
 								</select>      
-								<input type="hidden" name='POS_VAL_CTRL_INT' class="interselect" id='POS_VAL_CTRL_INT' value='{POS_VAL_RUB_INT}'>
+										<input type="hidden" name='POS_VAL_CTRL_INT' class="interselect" id='POS_VAL_CTRL_INT' value='{POS_VAL_RUB_INT}'>
+										<input type="hidden" name='POS_VAL_RUB_INF' class="interim"  value='{POS_VAL_RUB_INF}'>
 											</div>
 											<div class="col-sm-3">
 												<label for="bio">Dur&eacute;e (en jour) :</label>
@@ -1544,6 +1545,15 @@ $('.dureedebselect').val( $('.dureedeb').val()); //vue de modification
 
 
 	});   
+
+
+
+	  //Recuperation du mail de l'interimaire
+	$('.personnel').change(function() {
+     		p_interimaire=$(this).find(':selected').data('interim');
+            $('.interim').val(p_interimaire);
+     		 
+	});
 	</script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/ABS/workflow.js"></script>
 	<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/ABS/notification.js"></script>
