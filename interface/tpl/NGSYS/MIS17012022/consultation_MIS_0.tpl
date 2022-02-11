@@ -1031,7 +1031,8 @@
 			
 			$('.rhconnex,.financeconnex,.mngconnex,.contrconnex,.dgaconnex,.dgconnex').hide();
 
-			if(profil_util=='EMPLOYE'){
+			//if(profil_util=='EMPLOYE'){
+			if(profil_util=='COLLABORATEUR'){
 				$('.emplconnex').hide();
 			}
 			if(profil_util=='MANAGER'){

@@ -109,12 +109,13 @@ $(document).on('click','.bouton_sub',function(){
 
  
 	var val_modif = $('.action_hermes').val();
-    // var initiator="ibrahim.konate@ngser.com";
+     //var initiator="ibrahim.konate@ngser.com";
     var initiator =$('.createur').val().toLowerCase();
+
     var manager_wk =$('.manager_wk').val().toLowerCase();
     //var manager_wk="ibrahim.konate@ngser.com";
-    var rh_wk =$('.rh_wk').val().toLowerCase();
-    //var rh_wk="ibrahim.konate@ngser.com";
+   var rh_wk =$('.rh_wk').val().toLowerCase();
+   // var rh_wk="ibrahim.konate@ngser.com";
     var dga_wk =$('.dga_wk').val().toLowerCase();
     //var dga_wk="ibrahim.konate@ngser.com";
     var dg_wk =$('.dg_wk').val().toLowerCase();
@@ -185,7 +186,7 @@ $(document).on('click','.bouton_sub',function(){
                 ,appN);
              initiateur.sender();
                valideur(dg_wk,initiateur_wk,appN);
-        }
+        }   
   
        if (val_modif.slice(0,13) =='AA_CLOSDG_SAN') {
              //console.log('valider');
@@ -196,11 +197,21 @@ $(document).on('click','.bouton_sub',function(){
                     `
                 ,appN);
              initiateur.sender();
+
+
+                //Notification de la personne ayant fait objet de sanction
+              var sanctionne = new WorkflowMailer($('.init_personnel').val(),"DOCUMENT n\u00b0"+numdmd,
+                    `
+                       TYPE :  SANCTION N&deg; ${numdmd} <br/>
+                       INFOS : VOUS AVEZ ETE SANCTIONNE PAR L'ADMINISTRATION
+                    `
+                ,appN);
+             sanctionne.sender();
  
         } 
   
     // REFUS 
- 
+
      if(
              val_modif.slice(0,14) == 'AB_REFUSRH_SAN' ||
              val_modif.slice(0,14) == 'AB_REFUSDG_SAN'  ||
@@ -215,6 +226,16 @@ $(document).on('click','.bouton_sub',function(){
                     `
                 ,appN);
              initiateur.sender();
+
+
+               //Notification de la personne ayant fait objet de sanction
+              var sanctionne = new WorkflowMailer($('.init_personnel').val(),"DOCUMENT n\u00b0"+numdmd,
+                    `
+                       TYPE :  SANCTION N&deg; ${numdmd} <br/>
+                       INFOS : VOUS N'AVEZ PAS ETE SANCTIONNE PAR L'ADMINISTRATION
+                    `
+                ,appN);
+             sanctionne.sender();
         } 
  
  

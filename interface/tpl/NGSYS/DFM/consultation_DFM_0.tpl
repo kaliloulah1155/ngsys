@@ -399,7 +399,7 @@
 													</div>
 													<div class="col-sm-4">
 														<label>Nombre de groupe :</label>
-														<input type="text" name='POS_VAL_RUB_NGP' value="{POS_VAL_RUB_NGP}" class="form-control" placeholder="Cout total" style="width: 100%">
+														<input type="text" name='POS_VAL_RUB_NGP' value="{POS_VAL_RUB_NGP}" class="form-control" placeholder="Nombre de groupe" style="width: 100%">
 													</div>
 												</div>
 												<div class="row" style="margin-top: 13px">

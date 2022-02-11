@@ -270,10 +270,10 @@ $(document).on('click','.btn_enreg_dfm',function(e){
         .get();
 
 
-//console.log(personnel,civilite,datenaiss,nationalite,fonction,categorie,dtembauche,cnps,position) ;
+ //console.log(personnel,civilite,datenaiss,nationalite,fonction,categorie,dtembauche,cnps,position,code) ;
     reg_dfm(code,personnel,civilite,datenaiss,nationalite,fonction,categorie,dtembauche,cnps,position);
 
-       // e.preventDefault();
+       //  e.preventDefault();
 });
 
  let link_url_reg =

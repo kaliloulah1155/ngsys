@@ -127,7 +127,6 @@ try{
            
 
           	 //PREPARATION DES DONNEES 
-          	 
           	  $data['data'][] = [
           	  	'cnps'=>$cnps ?? '',
            			'email'=>$email ?? '',

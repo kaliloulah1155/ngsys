@@ -461,7 +461,7 @@
 
 						<div class="circle1">
 							<span class="label1">1</span>
-							<span class="title1">EMPLOYE</span>
+							<span class="title1" style="margin-left:-2rem">COLLABORATEUR</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 20%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->

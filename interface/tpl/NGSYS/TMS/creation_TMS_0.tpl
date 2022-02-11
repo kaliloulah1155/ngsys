@@ -21,8 +21,8 @@
 	<script type='text/javascript' src='/{NOM_APPLICATION}/include/script/ajax_search.js'></script>
 	<script language='javascript' src='/{NOM_APPLICATION}/include/script/ajax_recup_listhier.js'></script>
 	<script language='javascript' src='/{NOM_APPLICATION}/include/script/ajax_recup_arbo_dossier.js'></script>
-	<link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet" type="text/css" />
- 	<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<link href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet" type="text/css" />
+ 	<script type="text/javascript" src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script language='javascript' src='/{NOM_APPLICATION}/include/script/action_accueil.js'></script>
 	<script language='javascript' src='/{NOM_APPLICATION}/include/script/testNum.js'></script>
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>

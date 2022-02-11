@@ -86,7 +86,7 @@
   // echo $dtcontrat.' '.$categorie.' '.$salaire_base.' '.$dtembauche.' '.$prime_anciennete.' '.$prme_rdt;
  
     /////////////// INSERT DATA INSIDE REGISTER OF EMPLOYEE //////////////////////
- 
+      
      
 
         pg_query("UPDATE public.pos_tab_index_reg

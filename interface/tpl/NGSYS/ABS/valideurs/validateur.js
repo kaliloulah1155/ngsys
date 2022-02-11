@@ -118,13 +118,20 @@ $(document).on('click','.bouton_sub',function(){
 	
 	var val_modif = $('.action_hermes').val();
 
-    //var initiator="ibrahim.konate@ngser.com";
+    
     var initiator =$('.createur').val().toLowerCase();
+    //var initiator="ibrahim.konate@ngser.com";
+
     var manager_wk =$('.manager_wk').val().toLowerCase();
     //var manager_wk ="ibrahim.konate@ngser.com";
     var rh_wk =$('.rh_wk').val().toLowerCase();
-    var dga_wk =$('.dga_wk').val().toLowerCase();
+    //var rh_wk ="ibrahim.konate@ngser.com";
+   var dga_wk =$('.dga_wk').val().toLowerCase();
+     //var dga_wk ="ibrahim.konate@ngser.com";
+
     var dg_wk =$('.dg_wk').val().toLowerCase();
+    //var dg_wk ="ibrahim.konate@ngser.com";
+
     var  p_interimaire = $('.interim').val();
     
 

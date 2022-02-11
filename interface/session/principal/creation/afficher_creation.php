@@ -21,7 +21,7 @@
  * Gaby : 01.04.2003 : ajout constantes Fermer/Creer
  * PL : 25.07.2007 PL les variables issues de GET et POST
  * 		 sont recuperees par $_REQUEST
- */
+ */    
 // connexion
 if (!isset($_SESSION))
 session_start();
@@ -192,17 +192,12 @@ if ($retour)
 				  $salaire_base=$row_salbse[0];
 			 } 
 
-			 echo "<span class='salaire_base' style='display:none'>{$salaire_base}</span>";
-
-
-
-
-				    
+			 echo "<span class='salaire_base' style='display:none'>{$salaire_base}</span>";	    
 		}
 
 
 		  //Traitement etat de creances
-		if($_REQUEST['POS_TYPEDOC']=='PRT' ){
+		/*if($_REQUEST['POS_TYPEDOC']=='PRT' ){
 
 			$nombreEmp=0;
 			$montantEmp=0;
@@ -263,8 +258,6 @@ if ($retour)
 					break;
 				
 			}
-
-       
             echo "<span class='nombreEmp' style='display:none'>{$nombreEmp}</span>";
 			echo "<span class='montantEmp' style='display:none' >{$montantEmp}</span>";
 			echo "<span class='quotite' style='display:none'>{$quotite}</span>";
@@ -272,9 +265,7 @@ if ($retour)
 
 			echo "<span class='salaire' style='display:none'>{$salaireNet}</span>";
 			//echo $_SESSION["sess_user_name"];
-
-
-		}
+		}*/
 		
 		
         

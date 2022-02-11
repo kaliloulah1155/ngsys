@@ -2474,7 +2474,8 @@ function containerState(action){
 				$('.btnInfors').show();
 				$('.btnTelecs').show();
 				break;
-			case "EMPLOYE":
+			case "EMPLOYE" :
+            case "COLLABORATEUR":
 				  $('.btnAdmins').hide();
 				$('.btnRcrs').show();
 					   $('.btnRcrs2').hide();
@@ -2486,6 +2487,7 @@ function containerState(action){
 					$('.btnInfors').hide();
 					$('.btnTelecs').hide();
 				break;
+            
 			case "FINANCE":
 				    $('.btnAdmins').hide();
 					$('.btnRcrs').show();

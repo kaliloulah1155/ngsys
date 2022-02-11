@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultation de pret</title>
-	<link href="/{NOM_APPLICATION}/include/style_nouveau/style_accueil.css" rel="stylesheet">
+	 
     <link href="/{NOM_APPLICATION}/include/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href='https://use.fontawesome.com/releases/v5.0.8/css/all.css' type='text/css' rel='STYLESHEET' />
 	<script type='text/javascript' src='/{NOM_APPLICATION}/include/script/association.js'></script> 
@@ -56,6 +56,7 @@
 			padding-top: 3%;
 			padding-left: 5%;
 			padding-right: 5%;
+			height: 30rem;
 		}
 			
 		.col3_partie{
@@ -232,13 +233,13 @@
      
 		<div class="tab-content">    
 		   <div class="tab-pane fade active in"  id="tabs-1">
-		    <section class="botton_pris" >
+		    <section class="botton_pris" style="display:none" >
 				<a href="javascript:void(0)"  style="display:none" class="btn p-1 bg-info print_vbtn">Visualiser le pdf</a>
 				<a href="javascript:void(0)" class="btn p-1 bg-info print_btn">G&#233;n&#233;rer le pdf</a>
 			</section>
 				<div class="  col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					<!-- debut -->
-						<nav class="container-fluid">
+						<nav class="container-fluid">  
 							<div class="col-sm-12">
 								<!-- 12_ 1 infos -->
 								<div class="hearder_card jumbotron">
@@ -248,7 +249,8 @@
 									    <!-- nombre d'emprunt en cours -->
 										<input type="hidden"  name='POS_VAL_RUB_A2A' value="{POS_VAL_RUB_A2A}" class="vnbreemprunt"  />
 										 <!-- prelevement mensuel -->
-										<input type="hidden"  name='POS_VAL_RUB_DC1' value="{POS_VAL_RUB_DC1}" class="vprelevmens1"  />
+										<input type="hidden"  name='POS_VAL_RUB_ADR' value="{POS_VAL_RUB_ADR}" class="vprelevmens"  />
+										<input type="hidden"  name='POS_VAL_RUB_DC1' value="{POS_VAL_RUB_DC1}" class="vprelevmens_actuel"  />
 										<input type="hidden" class="prelev_mens_lettre" name="POS_VAL_RUB_A1" value="{POS_VAL_RUB_A1}">
 										 <!-- Quotité cessible-->
 										<input type="hidden"  name='POS_VAL_RUB_QUO' value="{POS_VAL_RUB_QUO}" class="vqutotite"  />
@@ -256,19 +258,19 @@
 										 <!-- montant d'emprunt en cours -->
 										<input type="hidden"  name='POS_VAL_RUB_DDN' value="{POS_VAL_RUB_DDN}" class="vmtnemprunt"  />
 										 <!-- date de fin prelevement -->
-										<input type="hidden"  name='POS_VAL_RUB_DGR' value="{POS_VAL_RUB_DGR}" class="vdatefinprelev1" />
+										<input type="hidden"  name='POS_VAL_RUB_DGR' value="{POS_VAL_RUB_DGR}" class="vdatefinprelev" />
 										 <!-- Quotité prelevable-->
-										<input type="hidden"  name='POS_VAL_RUB_RDT' value="{POS_VAL_RUB_RDT}" class="vqutotiteprelev1" />
+										<input type="hidden"  name='POS_VAL_RUB_RDT' value="{POS_VAL_RUB_RDT}" class="vqutotiteprelev" />
 									<!--fin etat creance -->
 
 									<div class="row" style="margin: 2%">
 										
 										<div class="col-sm-6 form-group">
-											<label for="bio" style="width:200px">Nombre d'emprunt en cours</label>:
+											<label for="bio" style="width:200px">Nombre d'emprunt</label>:
 											<span class="viewnombreEmp" style="margin-left: 2%">0</span>
 										</div>
 										<div class="col-sm-6 form-group">
-											<label for="bio" style="width:200px">Montant emprunt en cours</label>:
+											<label for="bio" style="width:200px">Montant emprunt</label>:
 											<span class="viewmontantEmp" style="margin-left: 2%">0</span>
 											<label for="bio" style="margin-left: 2%;font-size: 10px">XOF</label>
 										</div>
@@ -324,6 +326,15 @@
 										   <label for="bio">Date fin de pr&eacute;l&egrave;vement :</label>
 						   					<input type="text" name='POS_VAL_RUB_DFI' value="{POS_VAL_RUB_DFI}" placeholder="jj/mm/aaaa" class="form-control dateFin" readonly="true" style="width: 100%;">
 										</div>
+
+
+											<div class="col-sm-12 form-group" >
+													<label for="bio">Motif<span class='text'></span></label>
+													<input type="text" required="true" name='POS_VAL_RUB_COM' value="{POS_VAL_RUB_COM}" placeholder="Motif du pret" class="form-control" style="width: 100%;">
+											</div>
+
+
+
 									</div>
 								</div>
 							</div>
@@ -354,8 +365,8 @@
 
 
 						<div class="circle1">
-							<span class="label1">1</span>
-							<span class="title1">EMPLOYE</span>
+							<span class="label1">1</span>   
+							<span class="title1" style="margin-left:-2rem">COLLABORATEUR</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 20%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
@@ -646,6 +657,7 @@
 							</div>
 							<div class="col3_partie" style="padding: 5%;">
 								<!-- N° poseidon -->
+
 								<div class="form-group row" style="margin: 0%">
 									<label for="bio">N&#176; poseidon</label>
 									<input type="text" name='POS_VAL_RUB_NUD' id="numposeidon" value="{POS_VAL_RUB_NUD}" placeholder="N&#176; poseidon" class="form-control" style="width: 100%">
@@ -653,7 +665,7 @@
 								<!-- Etat Fiche -->
 								<div class="form-group" style="margin: 1%">
 									<label for="bio">Etat Fiche</label>
-									<input type="text" placeholder="Etat Fiche" name='POS_VAL_RUB_ETF' value="{POS_VAL_RUB_ETF}" class="form-control" style="width: 100%">
+									<input type="text" placeholder="Etat Fiche" name='POS_VAL_RUB_ETF' value="{POS_VAL_RUB_ETF}" class="form-control etat_fiche" style="width: 100%">
 								</div>
 								<!-- Historique -->
 								<div class="form-group" style="margin: 1%">
@@ -699,7 +711,7 @@
 	    <script language='javascript' src='/{NOM_APPLICATION}/include/jQuery/parseleyfr.js'></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PRT/prtpdf/pdfpret.js"></script>
-
+		<script language='javascript' src="/{NOM_APPLICATION}/interface/tpl/{NOM_APPLICATION}/PRT/calcpret/calc_prt.js"></script>  
 	<!-- endjquery  -->
 
 		
@@ -899,7 +911,7 @@
 
 			$('.rhconnex,.financeconnex,.contrconnex,.dgaconnex,.dgconnex').hide();
 
-			if(profil_util=='EMPLOYE'){
+			if(profil_util=='COLLABORATEUR'){
 				$('.emplconnex').hide();
 			}
 
@@ -938,123 +950,7 @@
 		 
 
 
-
-	//Traitement des creances 
-
-	  Number.prototype.formatMoney = function(decPlaces, thouSeparator, decSeparator) {
-		var n = this,
-			decPlaces = isNaN(decPlaces = Math.abs(decPlaces)) ? 2 : decPlaces,
-			decSeparator = decSeparator == undefined ? "." : decSeparator,
-			thouSeparator = thouSeparator == undefined ? "," : thouSeparator,
-			sign = n < 0 ? "-" : "",
-			i = parseInt(n = Math.abs(+n || 0).toFixed(decPlaces)) + "",
-			j = (j = i.length) > 3 ? j % 3 : 0;
-		return sign + (j ? i.substr(0, j) + thouSeparator : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thouSeparator) + (decPlaces ? decSeparator + Math.abs(n - i).toFixed(decPlaces).slice(2) : "");
-		};
-
-
-      let mois=1;
-	  let sommeEmprunt=0
-	  let montantmensuel=0;
-
-      
-	   var mtnprelev= parseInt($('.vprelevmens1').val());
-
-	    var quotite = parseInt($('.quotite').text()) ;
-
-
-		$('.viewmtnpreleve').text( ( parseInt($('.vprelevmens1').val()) ).formatMoney(0,'.','.'));
-		$('.viewquotiteprelev').text( ( parseInt($('.vqutotiteprelev1').val()) ).formatMoney(0,'.','.'));
-
-		 $('.vprelevmens').val(montantmensuel) ; 
-
-      
-	  //Calcul quotité cessible prelevable
-	  if(mtnprelev==0){
-		  var a=quotite;
-		   $('.vqutotiteprelev').val( isNaN(a) ?  0 : a.formatMoney(0,'','.') ) ;
-		  $('.viewquotiteprelev').text((a).formatMoney(0,'.','.')  );
-	  }else{
-           var b=(quotite*1)-(mtnprelev*1);
-		    $('.vqutotiteprelev').val( isNaN(b) ?  0 : b ) ;
-			$('.viewquotiteprelev').text((b).formatMoney(0,'.','.')  );
-	  }
-
-	  $(document).on('input keyup','.mois, .sommeEmprunt',function(){
-		    
-		     mois=parseInt($('.mois').val())*1;
-	       sommeEmprunt=parseInt($('.sommeEmprunt').val())*1;
-
-		    ConvNumberLetter($('.sommeEmprunt').val());
-
-		   ConvNumberLetter($('.mois').val());
-
-	        if(mois==0 || mois=='' ){
-			        montantmensuel=0 ;
-			        $('.vprelevmens').val(0) ; 	 
-			   			ConvNumberLetter($('.vprelevmens').val());
-					}else{
-             
-              
-              montantmensuel= parseInt(sommeEmprunt/mois);
-
-             var quotite = parseInt($('.vqutotite').val()) ;
-            
-             if(montantmensuel > quotite){
- 						   $('.flashalert').show();
-								  montantmensuel=0;
-								  $('.sommeEmprunt').val(0);
-								   ConvNumberLetter($('.sommeEmprunt').val());
-							 }else{
-		                $('.flashalert').hide();
-							 }
-
-     //console.log(quotite);
-							 //Calcul quotité cessible prelevable
-					if(montantmensuel==0){
-						var a=quotite;
-						// $('.vqutotiteprelev1').val( isNaN(a) ?  0 : a.formatMoney(0,'','.') ) ;
-						//$('.viewquotiteprelev').text((a).formatMoney(0,'.','.')  );
-					}else{
-						var b=(quotite*1)-(montantmensuel*1);
-
-						     
-						  $('.vqutotiteprelev1').val( isNaN(b) ?  0 : b.formatMoney(0,'','.') ) ;
-
-							$('.viewquotiteprelev').text((b).formatMoney(0,'.','.')  );
-					}
-                      
-					 $('.viewmtnpreleve').text( ( montantmensuel ).formatMoney(0,'.','.'));
-
-					 $('.vprelevmens1').val(isNaN(montantmensuel) ?  0 : montantmensuel.formatMoney(0,'','.')) ; 
-
-						 ConvNumberLetter($('.vprelevmens1').val());
-					}
-		  
-	  });
-	  
- 	$('.viewnombreEmp').text($('.vnbreemprunt').val());
- 	$('.viewquotite').text(( parseInt($('.vqutotite').val())).formatMoney(0,'.','.'));
-	$('.viewmontantEmp').text(( parseInt($('.vmtnemprunt').val())).formatMoney(0,'.','.'));
-	$('.vdatefinprelev').val( $('.datefin').text() ) ;
-	$('.viewquotiteprelev').text((parseInt($('.vqutotiteprelev1').val())).formatMoney(0,'.','.') ) ;
-
-$('.viewdatefin').text( $('.vdatefinprelev1').val() ) ;
- 
-
-
-
-
-
-
-	 
-//Fin Traitement des creances 
-   
-		
-
-
-
-    $(document).ready(function () {
+$(document).ready(function () {
 
 		$('#date1').datepicker({
 			altField: "#datepicker",
@@ -1133,8 +1029,6 @@ $('.viewdatefin').text( $('.vdatefinprelev1').val() ) ;
 
 			//timestpdeb=new Date(date1);
 			//tamp1=parseInt( parseInt(timestpdeb.getTime())/1000 );
-
-			
 
 			 if (!isNaN( y)) {
 			   $('.dateFin').val(date1);

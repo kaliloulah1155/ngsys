@@ -175,38 +175,12 @@ $(document).on('click','.bouton_sub',function(){
                     `
                 ,appN);
              initiateur.sender();
-
-             // MAJ DE LA BANQUE DE L'EMPLOYE
  
         } 
   
     // REFUS 
-
+    
+ 
 	
 });
    
-/*
-
-   function majBancaire(initiator_bq,banque,rib){
-
-        $.ajax({
-              url: this.link2,
-              type: "POST",
-               data:{
-                  sendemail:initiator_bq,
-                  titre:this.titre,
-                  contenu:this.contenu,
-              },
-              success: function(data) {
-                   if(data['status']="success"){
-                        console.log("Mail envoi avec success");
-                   }else{
-                        console.log("Echec d'envoi de mail");
-                   }
-                  
-              },
-              error: function(error) {
-                  console.log(error);   
-              },
-          });  
-   }*/

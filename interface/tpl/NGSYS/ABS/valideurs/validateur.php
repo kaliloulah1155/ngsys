@@ -36,7 +36,7 @@ include ('../../../../../configuration_w/mabd.php');
     while ($row_poste = pg_fetch_row($contests_poste)) {
     		$poste=$row_poste[0];
     }
-
+   
 
  	//recuperation du departement
  	$contests_depart =pg_query(" 

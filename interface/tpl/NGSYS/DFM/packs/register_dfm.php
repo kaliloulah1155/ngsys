@@ -15,7 +15,7 @@
 	$position=$_POST['position'];
 
 
-
+         
 
 if(!empty($loadcode) ){
              //for update use delete-insert OR Update add always second condition after code 

@@ -108,7 +108,7 @@
 			line-height: 30px;
 			margin-top: 7px;
 			margin-left: -5px;
-		}
+		}   
 		/* Done / Active */
 		.progres .bar.done, .progres .circle.done {
 			background: rgb(175, 167, 167);
@@ -582,9 +582,13 @@
 						<span class="bar1" style="display: none;"></span>
 
 
+
+
+
+					<span style="display:none;" class="ligne_collab">
 						<div class="circle1">
 							<span class="label1">1</span>
-							<span class="title1">EMPLOYE</span>
+							<span class="title1" style="margin-left:-4rem" >COLLABORATEUR</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 20%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<input type="hidden" name='POS_VAL_RUB_CRE' value="{POS_VAL_RUB_CRE}" class="createur" style="color: black;"  />
@@ -601,11 +605,11 @@
 							</div>
 						</div>
 						<span class="bar1"></span>
-
+					</span>
 						
 
 						<div class="circle1">
-							<span class="label1">1</span>
+							<span class="label1">2</span>
 							<span class="title1">MANAGER</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
@@ -805,7 +809,7 @@
 						<!-- acteur 1 -->
 						<div class="acteur1">
 							<div class="col-sm-4" style="padding-bottom: 3%;display: none;">
-								<label for="bio">MANAGER </label>
+								<label for="bio">MANAGER </label> (ADM)
 								<div class="info_group" style="display:flex;flex-direction:row">
 									<input type="text" class="form-control" name='POS_VAL_RUB_A4A' value="{POS_VAL_RUB_A4A}" style="width: 80%;">
 									<!--<a href="javascript:charger_vocabulaire(document.principal.POS_TYPEDOC.value, 'A4A', 'POS_VAL_RUB_A4A')">
@@ -1028,26 +1032,40 @@
 			
 			$('.rhconnex,.financeconnex,.mngconnex,.contrconnex,.dgaconnex,.dgconnex').hide();
 
-			if(profil_util=='EMPLOYE'){
+
+			if(profil_util=='COLLABO'){
 				$('.emplconnex').hide();
+				$('.ligne_collab').show();
 			}
 			if(profil_util=='MANAGER'){
 				$('.mngconnex').show();
+
+				 $('.ligne_collab').hide();
 			}
 			if(profil_util=='CONTROL'){
 				$('.contrconnex').show();
+
+				$('.ligne_collab').hide();
 			}
 			if(profil_util=='RH'){
 				$('.rhconnex').show();
+
+				$('.ligne_collab').hide();
 			}
 			if(profil_util=='DGA'){
 				$('.dgaconnex').show();
+
+				$('.ligne_collab').hide();
 			}
 			if(profil_util=='DIRECTE'){
 				$('.dgconnex').show();
+
+				$('.ligne_collab').hide();
 			}
 			if(profil_util=='FINANCE'){
 				$('.financeconnex').show();
+
+				$('.ligne_collab').hide();
 			}
 
 

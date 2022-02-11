@@ -646,7 +646,8 @@
 
 		$('.mngconnex').hide();
 
-		if(profil_util=='EMPLOYE'){
+		//if(profil_util=='EMPLOYE'){ 
+		if(profil_util=='COLLABORATEUR'){
 				$('.emplconnex').hide();
 			}
 

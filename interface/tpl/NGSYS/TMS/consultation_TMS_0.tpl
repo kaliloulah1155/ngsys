@@ -271,7 +271,7 @@
 				<div class="collapse navbar-collapse " id="navbar-collapse-3">
 					<ul class="nav navbar-nav level0 nav-tabs">
 						<li class="active b1" ><a role="button" class="btn btn-outline-primary" data-toggle="tab" href="#tabs-1" style="width: 100%;padding-top: -11px;">Demande</a></li>
-						<li class="b2"><a role="button" class="btn-outline-primary" data-toggle="tab" href="#tabs-2" style="width: 100%;padding-top: -11px;">Traitement</a></li>
+						<li class="b2"><a role="button" class="btn-outline-primary " data-toggle="tab" href="#tabs-2" style="width: 100%;padding-top: -11px; ">Traitement</a></li>
 						<li class="b3"><a role="button" class="btn-outline-primary" data-toggle="tab" href="#tabs-3" style="width: 100%;padding-top: -11px;">Document</a></li>
 						<li class="b4"><a role="button" class="btn-outline-primary" data-toggle="tab" href="#tabs-4" style="width: 100%;padding-top: -11px;">Historique</a></li>
 					</ul>
@@ -415,11 +415,11 @@
 							<span class="title1">User1</span>
 						</div>
 						<span class="bar1" style="display: none;"></span>
-
-
+        
+           <span class="ligne_collab" style="display:none">
 						<div class="circle1">
 							<span class="label1">1</span>
-							<span class="title1">EMPLOYE</span>
+							<span class="title1" style="margin-left:-4rem">COLLABORATEUR</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 20%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->
@@ -436,6 +436,8 @@
 							</div>
 						</div>
 						<span class="bar1"></span>
+
+					</span>
 
 						<div class="circle1">
 							<span class="label1">2</span>
@@ -628,12 +630,15 @@
 
 		$('.mngconnex').hide();
 
-		if(profil_util=='EMPLOYE'){
+		if(profil_util=='COLLABO'){
 				$('.emplconnex').hide();
+
+					$('.ligne_collab').show();
 			}
 
 			if(profil_util=='MANAGER'){
 				$('.mngconnex').show();
+				$('.ligne_collab').hide();
 			}
 
 

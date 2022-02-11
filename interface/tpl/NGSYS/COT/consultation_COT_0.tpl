@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>   
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultation du contrat</title>
@@ -557,7 +557,7 @@
 
 						<div class="circle1">
 							<span class="label1">2</span>
-							<span class="title1">EMPLOYE</span>
+							<span class="title1">COLLABORATEUR</span>
 							<!-- zone d'affichage -->
 							<div class="jumbotron pt-1" style="width: 30%; padding-top: 1%;padding-bottom: 3%;background: #4a67b3;color:#fff;border-radius:5px;z-index:999">
 								<!-- Affichage du login  -->

@@ -276,7 +276,7 @@
 									</div>
 									<div class="col-sm-4">
 										<label>Nombre de groupe :</label>
-										<input name="POS_VAL_RUB_NGP" value="{POS_VAL_RUB_NGP}"  type="text" class="form-control" placeholder="Cout total" style="width: 100%">
+										<input name="POS_VAL_RUB_NGP" value="{POS_VAL_RUB_NGP}"  type="text" class="form-control" placeholder="Nombre de groupe" style="width: 100%">
 									</div>
 								</div>
 								<div class="row" style="margin-top: 13px">
@@ -299,7 +299,7 @@
 			<!-- button -->
 			<div class="row col_btn">
 				<input type="resset" class="btn col-sm-2 btn_ferme" value="FERMER" style="font-size: 12px;margin-left: 36%;">
-				<input class="btn col-sm-2 btn_enreg" type="submit" id="app" value="ENREGISTRER" style="font-size: 12px;margin-left: 5%;" />
+				<input class="btn col-sm-2 btn_enreg_dfm" type="submit" id="app" value="ENREGISTRER" style="font-size: 12px;margin-left: 5%;" />
 			</div>  
 		</nav>
 			
